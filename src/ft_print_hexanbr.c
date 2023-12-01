@@ -6,7 +6,7 @@
 /*   By: mbriand <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/24 20:50:10 by mbriand           #+#    #+#             */
-/*   Updated: 2023/11/24 20:52:51 by mbriand          ###   ########.fr       */
+/*   Updated: 2023/12/01 19:51:00 by mbriand          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,4 +23,6 @@ int	ft_print_hexanbr(unsigned int n, char x)
 	{
 		ft_up_or_low(n, x);
 	}
+	// change return things
+	return (0);
 }

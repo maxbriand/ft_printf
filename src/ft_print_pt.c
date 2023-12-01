@@ -6,7 +6,7 @@
 /*   By: mbriand <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/24 20:50:17 by mbriand           #+#    #+#             */
-/*   Updated: 2023/11/24 21:45:51 by mbriand          ###   ########.fr       */
+/*   Updated: 2023/12/01 19:52:20 by mbriand          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ int	ft_print_pt(unsigned long long n, char x)
 	}
 	else
 	{
-		ft_choose_base(n, x);
+		ft_up_or_low(n, x);
 	}
+	// change return instruction
+	return (0);
 }

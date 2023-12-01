@@ -6,7 +6,7 @@
 /*   By: mbriand <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/24 20:50:28 by mbriand           #+#    #+#             */
-/*   Updated: 2023/11/30 02:15:40 by mbriand          ###   ########.fr       */
+/*   Updated: 2023/12/01 19:54:24 by mbriand          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ int	ft_printf(const char *s, ...)
 	va_list	args;
 
 	va_start(args, s);
+
+	counter = 0;
 	i = 0;
 	while (s[i])
 	{

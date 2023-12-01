@@ -1,6 +1,6 @@
 NAME = libftprintf.a
 CC = cc
-CFLAGS = -Wall -Werror -Wextra
+CFLAGS = -Wall -Werror -Wextra -std=c99
 
 #need to write all sources files
 SRC = 	src/ft_parser.c \
@@ -26,8 +26,8 @@ $(NAME) : $(OBJ)
 	ar rc $(NAME) $(OBJ)
 
 # generate src .o files
-src/%.o : $(SRC) $(LIBFT) $(LIBFTPRINTF_H)
-	$(CC) $(CFLAGS) -c $< -o $@ -I include -I libft
+src/%.o : src/%.c $(LIBFT) $(LIBFTPRINTF_H)
+	$(CC) $(CFLAGS) -g -c $< -o $@ -I include -I libft
 
 # generate libft .a file
 $(LIBFT) :

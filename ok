@@ -1,1 +1,0 @@
-cc -Wall -Werror -Wextra test/main.c -I include -I libft -L. -L libft -lft -lftprintf -c
