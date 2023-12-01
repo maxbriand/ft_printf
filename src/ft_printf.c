@@ -6,11 +6,15 @@
 /*   By: mbriand <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/24 20:50:28 by mbriand           #+#    #+#             */
-/*   Updated: 2023/11/24 20:53:39 by mbriand          ###   ########.fr       */
+/*   Updated: 2023/11/30 02:15:40 by mbriand          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
+#include <stdio.h>
+#include <stdarg.h>
+
+int	ft_parser(char c, va_list args);
 
 // listen the string (arg 1 of printf)
 int	ft_printf(const char *s, ...)
@@ -23,15 +27,16 @@ int	ft_printf(const char *s, ...)
 	i = 0;
 	while (s[i])
 	{
+		//pass the list of argument in parser function
 		if (s[i] == '%')
 		{
 			i++;
-			parser(s[i], args);
+			ft_parser(s[i], args);
 		}
 		else
 		{
 			ft_print_char(s[i]);
-			printf("ok");// continue to handle return
+			//printf("%c", s[i]);// continue to handle return
 			counter++;
 		}
 		i++;

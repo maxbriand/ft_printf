@@ -1,0 +1,17 @@
+SRC = 	ft_parser.c \
+	ft_print_char.c \
+	ft_print_hexanbr.c \
+	ft_print_nbr.c \
+	ft_print_pt.c \
+	ft_print_unnbr.c \
+	ft_printf.c \
+	ft_up_or_low.c \
+
+LIBFT = libft.a
+OBJ = $(patsubst %.c, %.o, src/$(SRC))
+
+all : $(OBJ)
+
+%.o :
+	@echo "$(OBJ)"
+	touch $(OBJ)

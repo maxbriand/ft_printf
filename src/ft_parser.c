@@ -6,16 +6,17 @@
 /*   By: mbriand <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/24 20:49:59 by mbriand           #+#    #+#             */
-/*   Updated: 2023/11/25 19:27:32 by mbriand          ###   ########.fr       */
+/*   Updated: 2023/11/30 02:15:16 by mbriand          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
+#include <stdarg.h>
 
 int	ft_parser(char c, va_list args)
 {
 	int	lenght;
-
+	
 	lenght = 0;
 	if (c == 'c')
 		lenght = ft_print_char(va_arg(args, int));
