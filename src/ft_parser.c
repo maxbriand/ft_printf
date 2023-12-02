@@ -6,7 +6,7 @@
 /*   By: mbriand <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/24 20:49:59 by mbriand           #+#    #+#             */
-/*   Updated: 2023/11/30 02:15:16 by mbriand          ###   ########.fr       */
+/*   Updated: 2023/12/01 20:02:32 by mbriand          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 int	ft_parser(char c, va_list args)
 {
 	int	lenght;
-	
+	//test
 	lenght = 0;
 	if (c == 'c')
 		lenght = ft_print_char(va_arg(args, int));

@@ -6,7 +6,7 @@
 /*   By: mbriand <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 23:22:12 by mbriand           #+#    #+#             */
-/*   Updated: 2023/11/24 21:47:40 by mbriand          ###   ########.fr       */
+/*   Updated: 2023/12/01 20:03:54 by mbriand          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,3 @@ int	ft_print_nbr(int n)
 		ft_print_char(n + 48);
 	return (10);
 }
-
-/*int main(void)
-{
-	ft_putnbr_fd(2, 1);
-	return (0);
-}*/

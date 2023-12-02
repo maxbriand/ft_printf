@@ -11,6 +11,7 @@ SRC = 	src/ft_parser.c \
 	src/ft_print_unnbr.c \
 	src/ft_printf.c \
 	src/ft_up_or_low.c \
+	src/ft_print_str.c \
 
 LIBFT = libft/libft.a
 
@@ -47,5 +48,5 @@ re : fclean
 	@make
 
 # printf tester
-test : $(NAME)
-	$(CC) $(CFLAGS) $(TESTER) -I include -I libft -L. -lftprintf
+test :
+	$(CC) $(CFLAGS) $(TESTER) -I include -I libft -L. -lftprintf -L libft -lft
