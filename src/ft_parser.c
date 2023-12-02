@@ -6,7 +6,7 @@
 /*   By: mbriand <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/24 20:49:59 by mbriand           #+#    #+#             */
-/*   Updated: 2023/12/02 01:09:13 by mbriand          ###   ########.fr       */
+/*   Updated: 2023/12/02 17:40:07 by mbriand          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,8 @@ int	ft_parser(char c, va_list args)
 		lenght = ft_print_hexanbr(va_arg(args, unsigned int), c);
 	else if (c == 'p')
 	{
-		ft_print_str("0x"); //should I count that?
-		lenght = ft_print_pt(va_arg(args, unsigned long long), 'x');
+		lenght = ft_print_str("0x"); //should I count that? +2
+		lenght += ft_print_pt(va_arg(args, unsigned long long), 'x');
 	}
 	else if (c == '%')
 		lenght = ft_print_char('%');

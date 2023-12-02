@@ -49,33 +49,36 @@ int main(void)
 	printf("%d VS %d\n", r9, r10); */
 
 	// //hexadecimal low test
-	unsigned int h1 = 2147483648;
+/* 	unsigned int h1 = 2147483648;
 	int h2 = 485677;
 	int h3 = -2147483648;
 	ft_printf("Mine:\n");
 	int r11 = ft_printf("%x %x %x\n", h1, h2, h3);
 	printf("Source:\n");
 	int r12 = printf("%x %x %x\n", h1, h2, h3);
-	printf("%d VS %d\n", r11, r12);
+	printf("%d VS %d\n", r11, r12); */
 
 	// //hexadecimal upper test
-	// unsigned int ha1 = 2147483648;
-	// int ha2 = 4856;
-	// int ha3 = -845;
-	// int r13 = ft_printf("Upper hexadecimal: %X %X %X\n", ha1, ha2, ha3);
-	// int r14 = printf("Upper hexadecimal: %X %X %X\n", ha1, ha2, ha3);
-	// printf("%d VS %d\n", r13, r14);
+/* 	unsigned int ha1 = 2147483648;
+	int ha2 = 4856;
+	int ha3 = -845;
+	int r13 = ft_printf("Upper hexadecimal: %X %X %X\n", ha1, ha2, ha3);
+	int r14 = printf("Upper hexadecimal: %X %X %X\n", ha1, ha2, ha3);
+	printf("%d VS %d\n", r13, r14); */
 
 	// // pointer test
-	// int demo = 89;
-	// char*	pt_demo = &c;
-	// int r15 = ft_printf("Pointer test: %p\n", pt_demo);
-	// int r16 = printf("Pointer test: %p\n", pt_demo);
-	// printf("%d VS %d\n", r15, r16);
+/* 	int	demo = 89;
+	int*	pt_demo = &demo;
+	char*	test = NULL;
+	ft_printf("Mine:\n");
+	int r15 = ft_printf("%p %p\n", pt_demo, test);
+	printf("Source:\n");
+	int r16 = printf("%p %p\n", pt_demo, test);
+	printf("%d VS %d\n", r15, r16); */
 
-	// // % case test
-	// int r17 = ft_printf("I am a legend %%%%\n");
-	// int r18 = printf("I am a legend %%%%\n");
-	// printf("%d VS %d\n", r17, r18);
+	// % case test
+	int r17 = ft_printf("I am a legend %%%%\n");
+	int r18 = printf("I am a legend %%%%\n");
+	printf("%d VS %d\n", r17, r18);
 	return(0);
 }
