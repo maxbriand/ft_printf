@@ -20,6 +20,8 @@ OBJ = $(patsubst %.c, %.o, $(SRC))
 
 TESTER = test/main.c
 
+OUTPUT = a.out
+
 all : $(NAME)
 
 # generate libftprintf.a file
@@ -48,5 +50,11 @@ re : fclean
 	@make
 
 # printf tester
-test :
-	$(CC) $(CFLAGS) $(TESTER) -I include -I libft -L. -lftprintf -L libft -lft
+
+test : all $(OUTPUT)
+	@./a.out | cat -e
+	@rm ./a.out
+
+# how can I check if my main file is changed?
+$(OUTPUT) :
+	@$(CC) $(CFLAGS) $(TESTER) -I include -I libft -L. -lftprintf -L libft -lft

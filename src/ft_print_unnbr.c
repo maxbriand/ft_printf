@@ -6,7 +6,7 @@
 /*   By: mbriand <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/24 20:50:57 by mbriand           #+#    #+#             */
-/*   Updated: 2023/12/01 19:53:46 by mbriand          ###   ########.fr       */
+/*   Updated: 2023/12/02 17:14:54 by mbriand          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,16 @@
 
 int	ft_print_unnbr(unsigned int n)
 {
+	int	i;
+
+	i = 0;
 	if (n > 9)
 	{
-		ft_print_unnbr(n / 10);
+		i = ft_print_unnbr(n / 10);
 		ft_print_unnbr(n % 10);
 	}
 	else
-	{
 		ft_print_char(n + '0');
-	}
-	// handle return
-	return (0);
+	i++;
+	return (i);
 }

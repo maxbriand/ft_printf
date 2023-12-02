@@ -6,7 +6,7 @@
 /*   By: mbriand <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/24 20:50:28 by mbriand           #+#    #+#             */
-/*   Updated: 2023/12/01 19:54:24 by mbriand          ###   ########.fr       */
+/*   Updated: 2023/12/02 00:51:26 by mbriand          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,12 +33,11 @@ int	ft_printf(const char *s, ...)
 		if (s[i] == '%')
 		{
 			i++;
-			ft_parser(s[i], args);
+			counter += ft_parser(s[i], args);
 		}
 		else
 		{
 			ft_print_char(s[i]);
-			//printf("%c", s[i]);// continue to handle return
 			counter++;
 		}
 		i++;

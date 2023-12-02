@@ -6,29 +6,37 @@
 /*   By: mbriand <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 23:22:12 by mbriand           #+#    #+#             */
-/*   Updated: 2023/12/01 20:03:54 by mbriand          ###   ########.fr       */
+/*   Updated: 2023/12/02 01:42:47 by mbriand          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-// modify the return value
-
 int	ft_print_nbr(int n)
 {
+	int	i;
+	int	j;
+
+	i = 0;
+	j = 0;
 	if (n == -2147483648)
-		return (ft_print_str("-2147483648"));
+	{
+		ft_print_str("-2147483648");
+		return (11);
+	}
 	if (n < 0)
 	{
 		ft_print_char('-');
 		n *= -1;
+		j++;
 	}
 	if (n > 9)
 	{
-		ft_print_nbr(n / 10);
+		i = ft_print_nbr(n / 10);
 		ft_print_char(n % 10 + 48);
 	}
 	if (n < 10 && n >= 0)
 		ft_print_char(n + 48);
-	return (10);
+	i = i + j + 1;
+	return (i);
 }

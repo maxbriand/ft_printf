@@ -6,7 +6,7 @@
 /*   By: mbriand <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/24 20:50:10 by mbriand           #+#    #+#             */
-/*   Updated: 2023/12/01 19:51:00 by mbriand          ###   ########.fr       */
+/*   Updated: 2023/12/02 17:33:56 by mbriand          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 
 int	ft_print_hexanbr(unsigned int n, char x)
 {
+	int	i;
+
+	i = 0;
 	if (n > 15)
 	{
 		ft_print_hexanbr(n / 16, x);
@@ -23,6 +26,6 @@ int	ft_print_hexanbr(unsigned int n, char x)
 	{
 		ft_up_or_low(n, x);
 	}
-	// change return things
-	return (0);
+	i++;
+	return (i);
 }
