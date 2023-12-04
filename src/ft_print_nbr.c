@@ -6,11 +6,11 @@
 /*   By: mbriand <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 23:22:12 by mbriand           #+#    #+#             */
-/*   Updated: 2023/12/02 01:42:47 by mbriand          ###   ########.fr       */
+/*   Updated: 2023/12/02 18:12:20 by mbriand          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_print_nbr(int n)
 {

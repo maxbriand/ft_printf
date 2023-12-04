@@ -12,21 +12,24 @@ SRC = 	src/ft_parser.c \
 	src/ft_printf.c \
 	src/ft_up_or_low.c \
 	src/ft_print_str.c \
+	libft/ft_strlcpy.c \
+	libft/ft_strlen.c \
 
-LIBFT = libft/libft.a
-
-LIBFTPRINTF_H = include/libftprintf.h
 OBJ = $(patsubst %.c, %.o, $(SRC))
 
-TESTER = test/main.c
+LIBFT = ./libft/libft.a
+LIBFTPRINTF_H = ./include/ft_printf.h
+
+TESTER = ./test/main.c
 
 OUTPUT = a.out
 
-all : $(NAME)
+all : $(NAME) $(LIBFT)
 
 # generate libftprintf.a file
-$(NAME) : $(OBJ)
-	ar rc $(NAME) $(OBJ)
+$(NAME) : $(LIBFT) $(OBJ) 
+	cp $(LIBFT) $(NAME)
+	ar rcs $(NAME) $(OBJ)
 
 # generate src .o files
 src/%.o : src/%.c $(LIBFT) $(LIBFTPRINTF_H)
@@ -57,4 +60,4 @@ test : all $(OUTPUT)
 
 # how can I check if my main file is changed?
 $(OUTPUT) :
-	@$(CC) $(CFLAGS) $(TESTER) -I include -I libft -L. -lftprintf -L libft -lft
+	@$(CC) $(CFLAGS) $(TESTER) -I include -I libft -L. -lftprintf

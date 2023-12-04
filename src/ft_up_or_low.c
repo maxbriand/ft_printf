@@ -6,11 +6,11 @@
 /*   By: mbriand <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/24 20:49:51 by mbriand           #+#    #+#             */
-/*   Updated: 2023/12/01 20:30:47 by mbriand          ###   ########.fr       */
+/*   Updated: 2023/12/02 21:02:50 by mbriand          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 void	ft_up_or_low(int n, char x)
 {

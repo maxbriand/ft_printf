@@ -1,4 +1,4 @@
-#include "libftprintf.h"
+#include "ft_printf.h"
 # include <stdio.h>
 
 int main(void)
@@ -12,12 +12,9 @@ int main(void)
 	printf("My return value %d\nThe original: %d\n\n", r1, r2); */
 
 	//  string test
-/* 	char*	m = "Let's get";
-	char*	u = "done";
-	char*	l = "to business!";
-	int r3 = ft_printf("%s %s %s\n", m, u, l);
-	int r4 = printf("%s %s %s\n", m, u, l);
-	printf("Mine: %d\nClassic: %d\n", r3, r4); */
+	int r3 = ft_printf(" NULL %p NULL ", NULL);
+	int r4 = printf(" NULL %p NULL ", NULL);
+	printf("Mine: %d\nClassic: %d\n", r3, r4);
 
 	// decimal basic test
 /* 	int	i = 52;
@@ -67,18 +64,15 @@ int main(void)
 	printf("%d VS %d\n", r13, r14); */
 
 	// // pointer test
-/* 	int	demo = 89;
-	int*	pt_demo = &demo;
-	char*	test = NULL;
 	ft_printf("Mine:\n");
-	int r15 = ft_printf("%p %p\n", pt_demo, test);
+	int r15 = ft_printf(" %p %p ", NULL, NULL);
 	printf("Source:\n");
-	int r16 = printf("%p %p\n", pt_demo, test);
-	printf("%d VS %d\n", r15, r16); */
+	int r16 = printf(" %p %p ", NULL, NULL);
+	printf("%d VS %d\n", r15, r16);
 
 	// % case test
-	int r17 = ft_printf("I am a legend %%%%\n");
+/* 	int r17 = ft_printf("I am a legend %%%%\n");
 	int r18 = printf("I am a legend %%%%\n");
-	printf("%d VS %d\n", r17, r18);
+	printf("%d VS %d\n", r17, r18); */
 	return(0);
 }

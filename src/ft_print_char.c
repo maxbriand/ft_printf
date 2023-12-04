@@ -6,12 +6,12 @@
 /*   By: mbriand <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 23:21:58 by mbriand           #+#    #+#             */
-/*   Updated: 2023/12/02 00:41:27 by mbriand          ###   ########.fr       */
+/*   Updated: 2023/12/02 18:12:10 by mbriand          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_print_char(char c)
 {
